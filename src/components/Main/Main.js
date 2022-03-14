@@ -41,10 +41,9 @@ export const ContactUs = () => {
 };
 
 const Main = () => {
-    const [buttonPopup, setButtonPopup] = useState(false)
-    const [post, setPost] = useState({})
+    const [setButtonPopup] = useState(false)
+    const [post] = useState({})
     return (
-
         <div className='main-wrapper'>
             <div className='main-block'>
                 <div className='main-left'>
@@ -102,7 +101,7 @@ const Main = () => {
                     </div>
                     <div>
                         <div className='card'>
-                        <img className='card-img' src={blackimg} alt="" />
+                            <img className='card-img' src={blackimg} alt="" />
                             <div className='card-text'>
                                 <h1>Sleep</h1>
                                 <p>Описание</p>
@@ -115,7 +114,7 @@ const Main = () => {
                     </div>
                     <div>
                         <div className='card'>
-                        <img className='card-img' src={blackimg} alt="" />
+                            <img className='card-img' src={blackimg} alt="" />
                             <div className='card-text'>
                                 <h1>Diet</h1>
                                 <p>Описание</p>
@@ -128,7 +127,7 @@ const Main = () => {
                     </div>
                     <div>
                         <div className='card'>
-                        <img className='card-img' src={blackimg} alt="" />
+                            <img className='card-img' src={blackimg} alt="" />
                             <div className='card-text'>
                                 <h1>Immune</h1>
                                 <p>Описание</p>

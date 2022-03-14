@@ -16,6 +16,7 @@
     padding: 20px ;
     width: 30%;
     font-size: 20px;
+    text-align: center;
   }
   .singlepost-text h1{
     margin: 10px;
@@ -39,4 +40,7 @@
     text-align: center;
     line-height: 40px;
   }
-  
+  .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
+    width: 30em !important;
+    height: 10em !important;
+  }

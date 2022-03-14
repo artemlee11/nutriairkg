@@ -16,3 +16,9 @@
   .catalog-card{
     width: 27%;
   }
+  .catalog-card:hover{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: all 0.2s ease-in;
+  }

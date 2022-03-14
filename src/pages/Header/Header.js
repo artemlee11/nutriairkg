@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-
+import "./Header.css";
 const COLORS = {
   primaryDark: "#404040",
 
@@ -124,8 +124,8 @@ const Header = () => {
     <>
       <div className='header-wrapper'>
         <div className='header-text'>
-          <h1>Nutriair Kygryzstan</h1>
           <h1>с.Кыргызстан г.Бишкек</h1>
+          <h1>Nutriair Kygryzstan</h1>
           <div className='header-descr'>
             <h1>+996(500)79-79-93</h1>
             <h1>Ежеденвно с 9:00 до 20:00</h1>
