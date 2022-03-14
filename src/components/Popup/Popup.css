@@ -1,0 +1,41 @@
+.popup{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .popup-inner{
+    position: relative;
+    padding: 32px;
+    width: 100%;
+    max-width: 640px;
+    background-color: #FFF;
+    border-radius: 5px;
+  }
+  .popup-inner .close-btn{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+  .mb-5{
+    padding: 10px;
+    align-items: center;
+    justify-content: space-around;
+    
+  }
+  .mb-5 label{
+    margin-right: 20px;
+    color: black;
+  }
+  .mb-5 input{
+    padding: 10px;
+  }
+  .popup-message{
+  vertical-align: top;
+  }
+  

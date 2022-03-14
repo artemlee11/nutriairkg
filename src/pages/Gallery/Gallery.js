@@ -2,7 +2,7 @@ import React, { useState, useCallback } from 'react';
 import { render } from 'react-dom';
 import ImageViewer from 'react-simple-image-viewer';
 import img from '../../img/nutriair.png';
-
+import './Gallery.css';
 
 const Gallery = () => {
   const [currentImage, setCurrentImage] = useState(0);

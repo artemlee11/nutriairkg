@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "postTitle": "Nutriair Energy",
+      "postDescr": "Ингалятор с кофеином и таурином, который будет держать вас в тонусе в течение всего дня. Nutriar Energy улучшает умственную способность, концентрацию внимания и помогает бороться с усталостью",
+      "postPrice": "850 сом",
+      "id": "11hYzCZ"
+    },
+    {
+      "postTitle": "Sleep",
+      "postDescr": "asd",
+      "postPrice": "850 сом",
+      "id": "ZhQ05KL"
+    },
+    {
+      "postTitle": "Immune",
+      "postDescr": "asd",
+      "postPrice": "850 сом",
+      "id": "2w8P5AR"
+    },
+    {
+      "postTitle": "Diet",
+      "postDescr": "sad",
+      "postPrice": "750 сом",
+      "id": "REDyzsi"
+    },
+    {
+      "postTitle": "Relax",
+      "postDescr": "asd",
+      "postPrice": "850 сом",
+      "id": "3AB16ab"
+    }
+  ]
+}

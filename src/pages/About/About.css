@@ -1,0 +1,39 @@
+.about{
+  background-image: url(../../img/bg.jpg);
+    color: white;
+    text-align: center;
+  }
+  .about-title{
+    font-size: 70px;
+    text-align: center;
+    padding: 100px 0 70px;
+    color: white;
+  }
+  .contacts-card{
+    background-color: white;
+    color: black;
+    padding: 50px;
+    text-align: center;
+  }
+  .contacts-container{
+    background-color: white;
+    color: black;
+    padding: 20px;
+  }
+  .contacts-card-text{
+    text-align: center;
+    box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.15);
+    font-size: 30px;
+    font-weight: 200;
+    padding: 60px;
+    width: 50%;
+    margin: auto;
+  }
+  .about-descr{
+    font-size: 25px;
+    width: 60%;
+    margin: auto;
+  }
+  .about-descr p{
+    margin: 20px 0;
+  }

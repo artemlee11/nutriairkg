@@ -1,0 +1,31 @@
+.footer{
+  background-image: url(../../img/bg.jpg);
+    color: black;
+  }
+  .footer-container{
+    width: 60%;
+    background-color: white;
+    padding: 70px 150px;
+    border-radius: 7px;
+    margin: auto;
+    text-align: center;
+  }
+  .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
+    margin-right: 10px;
+  }
+  .footer-container p{
+    margin: 10px 0;
+  }
+  .footer-descr-container{
+    color: #7E868E;
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  .footer-descr{
+    display: flex;
+    justify-content: center;
+  }
+  .footer-descr p{
+    margin: 60px 40px 40px;
+  }
+  

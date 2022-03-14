@@ -1,0 +1,25 @@
+.form-container{
+  text-align: center;
+}
+.change-form{
+    display: inline-flex;
+    padding: 30px;
+    flex-direction: column;
+    margin: auto;
+}
+.change-form input{
+    padding: 50px;
+    align-items: center;
+    margin: 0 60px;
+}
+.change-descr{
+    margin: 20px 0;
+}
+.css-1u3bzj6-MuiFormControl-root-MuiTextField-root{
+    margin: 10px 0 !important;
+}
+.css-sghohy-MuiButtonBase-root-MuiButton-root{
+    margin-top: 20px !important;
+    background-color: #FED84C !important;  
+    color: black !important;
+}

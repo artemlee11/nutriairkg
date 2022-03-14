@@ -2,6 +2,7 @@ import React from 'react';
 import Smoke1 from '../../img/smoke1.png';
 import Smoke2 from '../../img/smoke2.png';
 import ActionIMG from '../../img/action-img.png'
+import './Action.css';
 const Action = () => {
     return (
         <div className='Action'>

@@ -1,0 +1,20 @@
+.Action{
+    background-image: url(../../img/bg.jpg);
+    color: white;
+    text-align: center;
+  }
+  .action-img{
+    width: 25%;
+    border-radius: 5px;
+  }
+  .action-title{
+    padding: 0 0 50px 0;
+    font-weight: 100;
+    font-size: 40px;
+  }
+  .Action h1{
+    font-size: 50px;
+  }
+  .smoke-action{
+    width: 100%;
+  }

@@ -1,0 +1,17 @@
+.FAQ{
+  background-image: url(../../img/bg.jpg);
+    color: white;
+    padding: unset;
+  }
+  .faq-block{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .phone-faq{
+  width: 20%;
+  }
+  .smoke-faq1{
+    width: 100%;
+    margin-top: -20px;
+  }

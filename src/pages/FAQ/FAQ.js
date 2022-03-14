@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Phone from '../../img/phone1.png';
 import Smoke1 from '../../img/smoke1.png';
 import Smoke2 from '../../img/smoke2.png';
+import Popup from '../../components/Popup/Popup';
+import CallbackForm from '../../components/EmailJS/CallbackForm'
+import './FAQ.css';
 const FAQ = () => {
+    const [buttonPopup, setButtonPopup] = useState(false)
     return (
         <div className='FAQ'>
         <img className='smoke-faq1'src={ Smoke2 }/>
@@ -13,7 +17,10 @@ const FAQ = () => {
         <h1>Подскажем какой вид<br></br>вам больше всего<br></br>пойдет на пользу</h1>
         <p className='main-descr'>Нажмите на кнопку для<br></br>подробной консультации</p>
         <div className='button-text'>
-        <button className='main-button'>Помогите мне!</button> 
+        <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+          <CallbackForm />
+        </Popup>
+        <button className='main-button' onClick={() => setButtonPopup(true)}>Помогите мне!</button>
         </div>
         </div>
         </div>

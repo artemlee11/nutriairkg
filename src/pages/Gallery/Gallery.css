@@ -1,0 +1,10 @@
+.Gallery{
+    background-color: white;
+    color: black;
+    margin-top: -25px;
+    text-align: center;
+  }
+  .gallery-text{
+  text-align: center;
+  margin: 20px;
+  }
