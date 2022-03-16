@@ -23,6 +23,14 @@
       "age": "asd",
       "gender": "sad",
       "id": 8
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$By2s.t3jl8HYmPtoJlh.AOLQ9WTLiZ/pjUz4m9gZ/uoiT3c/GwQ5S",
+      "username": "Admin",
+      "age": "20",
+      "gender": "Мужской",
+      "id": 9
     }
   ],
   "posts": [
@@ -61,6 +69,12 @@
       "postDescr": "asd",
       "postPrice": "850 сом",
       "id": "3AB16ab"
+    },
+    {
+      "postTitle": "Focus",
+      "postDescr": "",
+      "postPrice": "850 сом",
+      "id": "w9qb_UO"
     }
   ]
 }
