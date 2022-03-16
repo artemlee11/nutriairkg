@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import TextField from '@mui/material/TextField';
@@ -8,13 +8,15 @@ import Footer from '../Footer/Footer';
 import blackimg from '../../img/energy.png';
 import Popup from '../../components/Popup/Popup';
 import ContactForm from '../../components/EmailJS/ContactForm';
+import {Link} from 'react-router-dom';
 import './SinglePost.css';
+import {Context} from "../../components/context/Context"
 const fetchData = (id) => {
     return axios.get(`http://localhost:3004/posts/${id}`)
         .then(response => response.data)
 }
-const SinglePost = () => {
 
+const SinglePost = () => {
     const [post, setPost] = useState({})
     const [title, setTitle] = useState('')
     const [descr, setDescr] = useState('')
@@ -23,7 +25,7 @@ const SinglePost = () => {
     const [usage, setUsage] = useState('')
     const [effect, setEffect] = useState('')
     const [changeMode, setChangeMode] = useState(false)
-
+    const {dispatch, user} = useContext(Context)
     const { id } = useParams()
 
     useEffect(() => {
@@ -59,7 +61,7 @@ const SinglePost = () => {
         setTaste("")
         setUsage("")
         setEffect("")
-        setChangeMode(false)
+      
     }
     const [buttonPopup, setButtonPopup] = useState(false)
     return (
@@ -109,12 +111,16 @@ const SinglePost = () => {
                         <button className='main-button' onClick={() => setButtonPopup(true)}>Оформить заказ</button>
                     </div>
                 </div>
+                {user ? 
+                <div>
                 {changeMode ? "" :
-                    <button onClick={handleDeletePost}>Удалить</button>}
+                    <button className='main-button' onClick={handleDeletePost}>Удалить</button>}
                 {changeMode ? "" :
-                    <button onClick={handleChangePost}>Редактировать</button>}
+                    <button className='main-button' onClick={handleChangePost}>Редактировать</button>}
                 {changeMode ?
-                    <button onClick={handleUpdatePost}>Сохранить</button> : ""}
+                    <button className='main-button' onClick={handleUpdatePost}>Сохранить</button> : ""}
+                </div>
+                : "" }
                 <div className='singlepost-descr'>
                     <h3>
                     Используйте когда вам необходим дополнительный заряд энергии, чтобы оставаться в тонусе.

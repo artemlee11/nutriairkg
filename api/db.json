@@ -1,9 +1,35 @@
 {
+  "users": [
+    {
+      "email": "artema@gmail.com",
+      "password": "$2a$10$G1n1ZebelPRH2gMCLxNjF.2DxhKvqR.jZWfEaL3BcAtz.bCFiDsE2",
+      "username": "artem",
+      "age": "12",
+      "gender": "asd",
+      "id": 6
+    },
+    {
+      "email": "artem2@gmail.com",
+      "password": "$2a$10$Tao807UMmW.NNWPJjngQBuqdr6m/UhwUrDIinnDNFn9b3CQAR4P5i",
+      "username": "test",
+      "age": "1",
+      "gender": "1",
+      "id": 7
+    },
+    {
+      "email": "sad@gmail.com",
+      "password": "$2a$10$isDNRjKPYk4zIiejiZGhAePb9NcA6FmTxAM4PK4mQMVJEgnh9XdFG",
+      "username": "asd",
+      "age": "asd",
+      "gender": "sad",
+      "id": 8
+    }
+  ],
   "posts": [
     {
       "postTitle": "Nutriair Energy",
       "postDescr": "Ингалятор с кофеином и таурином, который будет держать вас в тонусе в течение всего дня. Nutriar Energy улучшает умственную способность, концентрацию внимания и помогает бороться с усталостью",
-      "postPrice": " Ментол",
+      "postPrice": "850 сом",
       "postTaste": "                     Используйте когда вам необходим дополнительный заряд энергии, чтобы оставаться в тонусе.",
       "postUsage": " 200 вдохов",
       "postEffect": "Обеспечивает энергией на весь день",
@@ -12,7 +38,7 @@
     {
       "postTitle": "Sleep",
       "postDescr": "asd",
-      "postPrice": "Мята",
+      "postPrice": "850 сом",
       "postUsage": "200 вдохов",
       "postEffect": "Поможет уснуть",
       "id": "ZhQ05KL"
@@ -26,7 +52,7 @@
     {
       "postTitle": "Diet",
       "postDescr": "sad",
-      "postPrice": "750 сом",
+      "postPrice": "850 сом",
       "postTaste": "                     Используйте когда вам необходим дополнительный заряд энергии, чтобы оставаться в тонусе.",
       "id": "REDyzsi"
     },

@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import "./Header.css";
+import React, { useState, useContext } from 'react';
+import {Context} from '../../components/context/Context';
+import {Link} from 'react-router-dom';
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import "./Header.css";
+import Button from "@mui/material/Button";
+
 const COLORS = {
   primaryDark: "#404040",
-
 };
 const MenuLabel = styled.label`
   background-color: black;
@@ -71,7 +74,6 @@ const Icon = styled.span`
     top: ${(props) => (props.clicked ? "0" : "1rem")};
   }
 `;
-
 const Navigation = styled.nav`
   height: 100vh;
   position: fixed;
@@ -120,15 +122,27 @@ const ItemLink = styled(NavLink)`
 const Header = () => {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
+  const {dispatch, user} = useContext(Context)
+  const handleLogout = () => {
+      dispatch({type:"LOGOUT"})
+  }
   return (
     <>
       <div className='header-wrapper'>
         <div className='header-text'>
-          <h1>с.Кыргызстан г.Бишкек</h1>
-          <h1>Nutriair Kygryzstan</h1>
-          <div className='header-descr'>
-            <h1>+996(500)79-79-93</h1>
+          <div>
+            <h1 className="header-call"><a href="tel:+996500797993">+996 (500) 79-79-93</a></h1>
             <h1>Ежеденвно с 9:00 до 20:00</h1>
+          </div>
+          <h1 className="header-call"><a href="/">Nutriair Kygryzstan</a></h1>
+          <div className='header-descr'>
+          <ul class="social-icons">
+            <li><a class="social-icon-twitter" href="https://www.instagram.com/nutriairkg" title="Twitter" target="_blank" rel="noopener"></a></li>
+            <li><a class="social-icon-fb" href="https://www.instagram.com/nutriairkg" title="Facebook" target="_blank" rel="noopener"></a></li>
+            <li><a class="social-icon-vk" href="https://www.instagram.com/nutriairkg" title="ВКонтакте" target="_blank" rel="noopener"></a></li>
+            <li><a class="social-icon-telegram" href="https://www.instagram.com/nutriairkg" title="Telegram" target="_blank" rel="noopener"></a></li>
+            <li><a class="social-icon-youtube" href="https://www.instagram.com/nutriairkg" title="YouTube" target="_blank" rel="noopener"></a></li>
+          </ul>     
           </div>
         </div>
       </div>
@@ -166,6 +180,12 @@ const Header = () => {
           <li>
             <ItemLink onClick={handleClick} to="/faq">
               Связаться с нами
+            </ItemLink>
+          </li>
+          <li>
+            <ItemLink onClick={handleClick} to="/">
+               {user ? <Link to={"/profile"}>Админ</Link> : <Link to="/login">Войти</Link>}  
+               {user ? <Button variant="outlined" onClick={handleLogout}>Выйти</Button> : ""}
             </ItemLink>
           </li>
         </List>

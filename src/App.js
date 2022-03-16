@@ -9,6 +9,8 @@ import About from './pages/About/About';
 import Catalog from './pages/Catalog/Catalog';
 import PostForm from './components/PostForm/PostForm';
 import SinglePost from './pages/SinglePost/SinglePost';
+import Register from './components/Register/Register';
+import Login from './components/Login/Login';
 import Footer from './pages/Footer/Footer';
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
           <Route path="/createpost" element={<PostForm />} />
           <Route path="/singlepost/:id" element={<SinglePost />} />
           <Route path="/footer" element={<Footer />} />
+          <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login/>}/>
         </Routes>
       </div>
     </div>

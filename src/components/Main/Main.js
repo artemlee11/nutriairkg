@@ -1,4 +1,6 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom'
+import axios from 'axios'
 import Diet from '../../img/diet_image.png';
 import Smoke1 from '../../img/smoke1.png';
 import FAQ from '../../pages/FAQ/FAQ'
@@ -6,11 +8,16 @@ import Action from '../../pages/Action/Action'
 import Gallery from '../../pages/Gallery/Gallery'
 import Footer from '../../pages/Footer/Footer'
 import Nutriair from '../../img/nutriair.png';
-import blackimg from '../../img/energy.png';
+import energy from '../../img/energy.png';
+import sleep from '../../img/sleep.png';
+import immune from '../../img/immune.png';
+import diet from '../../img/diet.png';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import emailjs from '@emailjs/browser';
 import InfiniteCarousel from 'react-leaf-carousel';
 import { Link, } from 'react-router-dom';
+import Post from '../Post/Post';
+
 export const ContactUs = () => {
     const form = useRef();
 
@@ -40,9 +47,19 @@ export const ContactUs = () => {
     );
 };
 
+
 const Main = () => {
+    const fetchData = (id) => {
+        return axios.get(`http://localhost:3004/posts/${id}`)
+            .then(response => response.data)
+    }    
+    const { id } = useParams()
+    
+    useEffect(() => {
+        fetchData(id).then(data => setPost(data))
+    })
     const [setButtonPopup] = useState(false)
-    const [post] = useState({})
+    const [post, setPost] = useState({})
     return (
         <div className='main-wrapper'>
             <div className='main-block'>
@@ -57,6 +74,7 @@ const Main = () => {
                 </div>
                 <img className='dieta' src={Diet} alt="" />
             </div>
+            
             <img className='smoke-main' src={Smoke1} alt="" />
             <div className='mini-catalog'>
                 <h1 className='mini-catalog-title'>Для любых событий и дорогих вам людей</h1>
@@ -87,26 +105,24 @@ const Main = () => {
                     scrollOnDevice={true}
                 >
                     <div>
-                        <div className='card'>
-                            <img className='card-img' src={blackimg} alt="" />
+                    <div className='card'> 
+                            <img className='card-img' src={energy} alt="" />
                             <div className='card-text'>
                                 <h1>Energy</h1>
-                                <p>Описание</p>
                                 <h3>850 сом</h3>
-                                <Link to={`/singlepost/${post.id}`}>
+                                <Link to={`/singlepost/11hYzCZ`}>
                                     <button className='main-button' onClick={() => setButtonPopup(true)}>Подробнее</button>
                                 </Link>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <div className='card'>
-                            <img className='card-img' src={blackimg} alt="" />
+                        <div className='card'> 
+                            <img className='card-img' src={sleep} alt="" />
                             <div className='card-text'>
                                 <h1>Sleep</h1>
-                                <p>Описание</p>
                                 <h3>850 сом</h3>
-                                <Link to={`/singlepost/${post.id}`}>
+                                <Link to={`/singlepost/ZhQ05KL`}>
                                     <button className='main-button' onClick={() => setButtonPopup(true)}>Подробнее</button>
                                 </Link>
                             </div>
@@ -114,12 +130,11 @@ const Main = () => {
                     </div>
                     <div>
                         <div className='card'>
-                            <img className='card-img' src={blackimg} alt="" />
+                            <img className='card-img' src={diet} alt="" />
                             <div className='card-text'>
                                 <h1>Diet</h1>
-                                <p>Описание</p>
                                 <h3>850 сом</h3>
-                                <Link to={`/singlepost/${post.id}`}>
+                                <Link to={`/singlepost/REDyzsi`}>
                                     <button className='main-button' onClick={() => setButtonPopup(true)}>Подробнее</button>
                                 </Link>
                             </div>
@@ -127,13 +142,12 @@ const Main = () => {
                     </div>
                     <div>
                         <div className='card'>
-                            <img className='card-img' src={blackimg} alt="" />
+                            <img className='card-img' src={immune} alt="" />
                             <div className='card-text'>
                                 <h1>Immune</h1>
-                                <p>Описание</p>
                                 <h3>850 сом</h3>
-                                <Link to={`/singlepost/${post.id}}`}>
-                                    <button className='main-button' onClick={() => setButtonPopup(true)}>Подробнее</button>
+                                <Link to={`/singlepost/2w8P5AR`}>
+                                    <button className='main-button'  onClick={() => setButtonPopup(true)}>Подробнее</button>
                                 </Link>
                             </div>
                         </div>
