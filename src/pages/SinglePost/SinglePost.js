@@ -8,9 +8,9 @@ import Footer from '../Footer/Footer';
 import blackimg from '../../img/energy.png';
 import Popup from '../../components/Popup/Popup';
 import ContactForm from '../../components/EmailJS/ContactForm';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './SinglePost.css';
-import {Context} from "../../components/context/Context"
+import { Context } from "../../components/context/Context"
 const fetchData = (id) => {
     return axios.get(`http://localhost:3004/posts/${id}`)
         .then(response => response.data)
@@ -25,7 +25,7 @@ const SinglePost = () => {
     const [usage, setUsage] = useState('')
     const [effect, setEffect] = useState('')
     const [changeMode, setChangeMode] = useState(false)
-    const {dispatch, user} = useContext(Context)
+    const { dispatch, user } = useContext(Context)
     const { id } = useParams()
 
     useEffect(() => {
@@ -34,6 +34,7 @@ const SinglePost = () => {
 
     const handleDeletePost = () => {
         axios.delete(`http://localhost:3004/posts/${id}`)
+        document.location.href = '/catalog'
     }
 
     const handleChangePost = () => {
@@ -61,7 +62,7 @@ const SinglePost = () => {
         setTaste("")
         setUsage("")
         setEffect("")
-      
+        setChangeMode(false)
     }
     const [buttonPopup, setButtonPopup] = useState(false)
     return (
@@ -111,55 +112,68 @@ const SinglePost = () => {
                         <button className='main-button' onClick={() => setButtonPopup(true)}>Оформить заказ</button>
                     </div>
                 </div>
-                {user ? 
-                <div>
-                {changeMode ? "" :
-                    <button className='main-button' onClick={handleDeletePost}>Удалить</button>}
-                {changeMode ? "" :
-                    <button className='main-button' onClick={handleChangePost}>Редактировать</button>}
-                {changeMode ?
-                    <button className='main-button' onClick={handleUpdatePost}>Сохранить</button> : ""}
-                </div>
-                : "" }
+                {user ?
+                    <div className='change-buttons'>
+                        {changeMode ? "" :
+                            <button className='main-button' onClick={handleChangePost}>Редактировать</button>}
+                        {changeMode ? "" :
+                            <button className='main-button' onClick={handleDeletePost}>Удалить</button>}
+                        {changeMode ?
+                            <button className='main-button' onClick={handleUpdatePost} >Сохранить</button> : ""}
+                    </div>
+                    : ""}
                 <div className='singlepost-descr'>
-                    <h3>
-                    Используйте когда вам необходим дополнительный заряд энергии, чтобы оставаться в тонусе.
-                    </h3>
-                    <h2>Вкус: 
-                            {changeMode ?
+                    <h4>
+                        Используйте когда вам необходим дополнительный заряд энергии, чтобы оставаться в тонусе.
+                    </h4>
+                    <div className='singlepost-descr-change'>
+                        <div className='descr-change'>
+                    <h2>Вкус:
+                        </h2>
+                            <h2>
+                        {changeMode ?
                             <TextField
                                 value={price}
                                 onChange={e => setPrice(e.target.value)}
                                 id="post-feature"
-                                label="Введите описание"
+                                label="Введите название"
                                 variant="outlined" />
-                            : post.postPrice}
-                            <br></br>
-                        Ресурс использования до 
+                                : post.postPrice}
+                                </h2>   
+                                </div>
+                                <div className='descr-change'>
+
+                        <h2>
+                        Ресурс использования до
+                        </h2>  
+                        <h2>
                         {changeMode ?
                             <TextField
-                                value={usage}
-                                onChange={e => setUsage(e.target.value)}
-                                id="post-feature"
-                                label="Введите описание"
-                                variant="outlined" />
+                            value={usage}
+                            onChange={e => setUsage(e.target.value)}
+                            id="post-feature"
+                            label="Введите описание"
+                            variant="outlined" />
                             : post.postUsage}
-                        <br></br>
+                            </h2>
+                            </div>
+                        <h2>
                         {changeMode ?
                             <TextField
                                 value={effect}
                                 onChange={e => setEffect(e.target.value)}
                                 id="post-feature"
-                                label="Введите описание"
+                                label="Введите действие"
                                 variant="outlined" />
                             : post.postEffect}
                     </h2>
-                    <h2>
+                                </div>
+                    <h3>
                         Как использовать:<br></br>
                         - Снимите защитный колпачок;<br></br>
                         - Сделайте вдох в течение 3 секунд;<br></br>
                         - Повторять по мере необходимости или когда требуется заряд энергии.<br></br>
-                    </h2>
+                    </h3>
                     <h4>** Рекомендуется 20 ингаляций в час **<br></br>
                         ** Не рекомендуется лицам до 18 лет без согласия родителей**<br></br>
                         **Не рекомендуется беременным женщинам без консультации с врачом**

@@ -155,3 +155,20 @@
 .ad-list li::marker{
   color: #5D6AFB;
 }
+/* Login */
+.login-form-container{
+  text-align: center;
+  margin-top: 250px;
+}
+.login-form{
+  display: unset !important;
+  padding: unset !important;
+}
+/* Link */
+.link-login{
+  color: white;
+  text-decoration: none;
+}
+.link-login:hover{
+  color: black;
+}

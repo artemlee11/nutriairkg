@@ -68,7 +68,10 @@ const Main = () => {
                     <h1>Nutriair Diet <br></br>Будь всегда в тонусе!</h1>
                     <p className='main-descr'>Доставим в любую точку города в <br></br>короткие сроки!</p>
                     <div className='button-text'>
-                        <button className='main-button'>Перейти в каталог</button>
+                        <a href='/catalog'>
+                            <button className='main-button'>Перейти в каталог</button>
+                        </a>
+                            
                         <p className='button-descr'>9 различных <br></br>видов на выбор</p>
                     </div>
                 </div>
@@ -169,7 +172,9 @@ const Main = () => {
                             </ul>
                         </div>
                         <div className='button-text'>
+                        <a href='/catalog'>
                             <button className='main-button'>Перейти в каталог</button>
+                        </a>
                         </div>
                     </div>
                     <img className='phone-faq' src={Nutriair} alt="" />

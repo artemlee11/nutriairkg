@@ -18,11 +18,11 @@ const PostForm = () => {
     setTitle("");
     setDescr("");
     setPrice("");
+    document.location.href = '/catalog'
   };
 
   return (
     <div className="form-container">
-
     <form className="change-form" onSubmit={handleSubmit}>
       <TextField
         value={title}

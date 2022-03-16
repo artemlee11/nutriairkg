@@ -1,7 +1,8 @@
 .form-container{
   text-align: center;
+  margin-top: 150px;
 }
-.change-form{
+.change-form , .login-form{
     display: inline-flex;
     padding: 30px;
     flex-direction: column;

@@ -1,13 +1,10 @@
 import React, { useState, useContext } from 'react';
 import { TextField } from '@mui/material'
-import Button from '@mui/material/Button'
 import axios from 'axios'
 import {Context} from "../../components/context/Context"
-import { Redirect } from "react-router"
-import { Route } from "react-router-dom";
-import Main from '../Main/Main';
+import { Routes, Route } from "react-router-dom";
 
-const Login = () => {
+const Login = (props) => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const {dispatch, user} = useContext(Context)
@@ -25,6 +22,7 @@ const Login = () => {
             setEmail("")
             setPassword("")
             setChangeMode(false)
+            document.location.href = '/'
         }
         catch(error){
             console.log(error)
@@ -33,14 +31,13 @@ const Login = () => {
     }
     console.log(user)
     return (
-        <div>
-       <form onSubmit={handleLogin}>
+        <div className='login-form-container'>
+       <form className='login-form' onSubmit={handleLogin}>
             <TextField required value={email} onChange={e => setEmail(e.target.value) } id="email-register" label="Введите почту" variant="outlined" />
             <TextField required type="password" value={password} onChange={e => setPassword(e.target.value) } id="email-register" label="Введите пароль" variant="outlined" />
-            <Button type="submit"  label="submit"></Button>
-            <Route exact path="/">
-  {user ? <Redirect to="/dashboard" /> : <Main />}
-</Route>
+            <div>
+            <button className='main-button' type="submit" label="submit">Войти</button>
+            </div>
        </form>
         </div>
     );

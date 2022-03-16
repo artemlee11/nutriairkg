@@ -29,18 +29,30 @@
   }
   .singlepost-descr h3{
     font-weight: 400;
-    text-align: center;
-    padding-bottom: 60px;
+    padding: 40px 0;
   }
   .singlepost-descr h2{
     font-weight: 300;
-    padding: 30px 0;
+    padding: 10px 0;
+
   }
   .singlepost-descr h4{
     text-align: center;
     line-height: 40px;
+    padding: 10px 0 30px ;
   }
-  .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
-    width: 30em !important;
-    height: 10em !important;
+  .change-buttons{
+    text-align: center;
+  }
+  .change-buttons button{
+    margin: 10px;
+  }
+  .descr-change{
+    width: 40%;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+  }
+  .descr-change h2{
+    margin-right: 10px;
   }

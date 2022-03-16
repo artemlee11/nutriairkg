@@ -125,6 +125,7 @@ const Header = () => {
   const {dispatch, user} = useContext(Context)
   const handleLogout = () => {
       dispatch({type:"LOGOUT"})
+      document.location.href = '/'
   }
   return (
     <>
@@ -158,11 +159,6 @@ const Header = () => {
             </ItemLink>
           </li>
           <li>
-            <ItemLink onClick={handleClick} to="/createpost">
-              Создать пост
-            </ItemLink>
-          </li>
-          <li>
             <ItemLink onClick={handleClick} to="/catalog">
               Каталог
             </ItemLink>
@@ -183,9 +179,14 @@ const Header = () => {
             </ItemLink>
           </li>
           <li>
+            <ItemLink onClick={handleClick} to="/createpost">
+            {user ? <p>Создать пост</p> : "" }
+            </ItemLink>
+          </li>
+          <li>
             <ItemLink onClick={handleClick} to="/">
-               {user ? <Link to={"/profile"}>Админ</Link> : <Link to="/login">Войти</Link>}  
-               {user ? <Button variant="outlined" onClick={handleLogout}>Выйти</Button> : ""}
+               {user ? "" : <Link className="link-login" to="/login">Войти</Link>}  
+               {user ? <p variant="outlined" onClick={handleLogout}>Выйти</p> : ""}
             </ItemLink>
           </li>
         </List>
