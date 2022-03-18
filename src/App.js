@@ -12,6 +12,7 @@ import SinglePost from './pages/SinglePost/SinglePost';
 import Register from './components/Register/Register';
 import Login from './components/Login/Login';
 import Footer from './pages/Footer/Footer';
+
 function App() {
   return (
     <div className="App">
@@ -30,6 +31,7 @@ function App() {
           <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login/>}/>
         </Routes>
+ 
       </div>
     </div>
   );

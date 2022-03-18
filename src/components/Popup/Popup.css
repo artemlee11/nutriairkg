@@ -19,23 +19,32 @@
   }
   .popup-inner .close-btn{
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 10px;
+    right: 10px;
+  }
+  .close-btn{
+    background-color:black;
+    color: white;
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 45px;
   }
   .mb-5{
     padding: 10px;
     align-items: center;
     justify-content: space-around;
-    
   }
   .mb-5 label{
     margin-right: 20px;
     color: black;
   }
-  .mb-5 input{
-    padding: 10px;
+  .mb-5 input, textarea{
+    padding:10px;
+    border-radius:10px;
+    border: 1px solid black;
   }
   .popup-message{
   vertical-align: top;
+  
   }
   

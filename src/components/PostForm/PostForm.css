@@ -24,3 +24,8 @@
     background-color: #FED84C !important;  
     color: black !important;
 }
+@media all and (max-width: 480px){
+    .form-container{
+        margin: 0
+    }
+}

@@ -4,6 +4,7 @@ import Smoke1 from '../../img/smoke1.png';
 import Smoke2 from '../../img/smoke2.png';
 import Popup from '../../components/Popup/Popup';
 import CallbackForm from '../../components/EmailJS/CallbackForm'
+
 import './FAQ.css';
 const FAQ = () => {
     const [buttonPopup, setButtonPopup] = useState(false)

@@ -102,7 +102,7 @@ const Main = () => {
                     dots={true}
                     showSides={true}
                     sidesOpacity={.5}
-                    sideSize={.1}
+                    sideSize={.01}
                     slidesToScroll={1}
                     slidesToShow={3}
                     scrollOnDevice={true}
@@ -177,7 +177,7 @@ const Main = () => {
                         </a>
                         </div>
                     </div>
-                    <img className='phone-faq' src={Nutriair} alt="" />
+                    <img className='ad-img' src={Nutriair} alt="" />
                 </div>
             </div>
             <Action />

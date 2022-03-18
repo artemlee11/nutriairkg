@@ -12,13 +12,25 @@
     margin: auto;
     width: 74%;
     justify-content: center;
+    text-align: center;
   }
   .catalog-card{
     width: 27%;
+    transition: all 0.2s ease-in;
   }
   .catalog-card:hover{
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
-    transition: all 0.2s ease-in;
+  }
+  @media all and (max-width: 480px){
+    .catalog-cards{
+      width: 100%;
+      text-align: center;
+      padding-bottom: 40px;
+    }
+      .catalog-card{
+      width: 45%;
+      margin: 10px;
+    }
   }

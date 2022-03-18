@@ -2,9 +2,10 @@ import { useEffect, useState } from "react"
 import InputField from "./InputField"
 import SelectField from "./SelectField";
 import TextareaField from "./TextareaField";
-import { ChevronRightIcon } from '@heroicons/react/solid'
 import emailjs from 'emailjs-com';
-
+import Alert from '@mui/material/Alert';
+import Stack from '@mui/material/Stack';
+import '../Popup/Popup'
 const ContactForm = () => {
   const [values, setValues] = useState({
     fullName: '',
@@ -51,7 +52,7 @@ const ContactForm = () => {
   return (
     <div className="lg:mt-48 lg:mr-48 pt-6 pb-8 bg-white shadow-xl rounded p-5">
       {status && renderAlert()}
-      <form onSubmit={handleSubmit}>
+      <form className="popup-input" onSubmit={handleSubmit}>
         <h3 className="text-gray-700 mb-7 text-xl font-semibold">Офформить заявку</h3>
         <InputField value={values.fullName} handleChange={handleChange} label="Введите свое имя" name="fullName" type="text" placeholder="John Doe" />
         <InputField value={values.email} handleChange={handleChange} label="Введите свой E-Mail" name="email" type="email" placeholder="jphn@example.com" />
@@ -68,9 +69,11 @@ const ContactForm = () => {
 }
 
 const renderAlert = () => (
-  <div className="px-4 py-3 leading-normal text-blue-700 bg-blue-100 rounded mb-5 text-center">
-    <p>your message submitted successfully</p>
-  </div>
+  <Stack sx={{ width: '100%' }} spacing={2}>
+  <Alert variant="filled" severity="success">
+    Заявка отправлена!
+  </Alert>
+</Stack>
 )
 
 export default ContactForm

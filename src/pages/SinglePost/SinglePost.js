@@ -133,12 +133,12 @@ const SinglePost = () => {
                             <h2>
                         {changeMode ?
                             <TextField
-                                value={price}
-                                onChange={e => setPrice(e.target.value)}
+                                value={taste}
+                                onChange={e => setTaste(e.target.value)}
                                 id="post-feature"
                                 label="Введите название"
                                 variant="outlined" />
-                                : post.postPrice}
+                                : post.postTaste}
                                 </h2>   
                                 </div>
                                 <div className='descr-change'>

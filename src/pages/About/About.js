@@ -9,7 +9,7 @@ const About = () => {
         <div className='about'>
             <h1 className='about-title'>О нас</h1>
             <img className='smoke-main' src={Smoke1} alt="" />
-            <div className='contacts-card'>
+            <div className='about-text'>
                 <div className='about-descr'>
                 <p>Nutriаir — современное портативное устройство ингаляции, революционная, безопасная и 
                     эффективная система доставки витаминов и активных веществ в организм человека через 

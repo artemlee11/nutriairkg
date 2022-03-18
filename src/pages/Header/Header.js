@@ -135,7 +135,7 @@ const Header = () => {
             <h1 className="header-call"><a href="tel:+996500797993">+996 (500) 79-79-93</a></h1>
             <h1>Ежеденвно с 9:00 до 20:00</h1>
           </div>
-          <h1 className="header-call"><a href="/">Nutriair Kygryzstan</a></h1>
+          <h1 className="header-call" id="header-nutriair"><a href="/">Nutriair Kygryzstan</a></h1>
           <div className='header-descr'>
           <ul class="social-icons">
             <li><a class="social-icon-twitter" href="https://www.instagram.com/nutriairkg" title="Twitter" target="_blank" rel="noopener"></a></li>

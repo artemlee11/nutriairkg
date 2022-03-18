@@ -15,3 +15,23 @@
     width: 100%;
     margin-top: -20px;
   }
+
+  @media all and (max-width: 480px){
+    .faq-block{
+      flex-direction: column;
+      text-align: center;
+    }
+    .button-text{
+      display: unset;
+    }
+    .phone-faq, .ad-img{
+      width: 65%;
+      padding: 20px 0 30px;
+    }
+    .ad-list{
+      margin: 20px 45px;
+    }
+    .ad-img{
+      width: 90%;
+    }
+  }

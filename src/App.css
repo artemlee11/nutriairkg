@@ -92,6 +92,11 @@
   font-size: 14px !important;
   font-weight: 400;
 }
+.InfiniteCarouselArrowIcon{
+  border: solid #000 !important;
+  border-width: 0 5px 5px 0 !important;
+  margin: 0px 35px;
+}
 .InfiniteCarouselDots {
   bottom: -50px !important;
 }
@@ -103,12 +108,12 @@
   display: inline-block;
   border-radius: 7px;
   padding: 10px;
+  transition: all 0.2s ease-in;
 }
 .card:hover{
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
-  transition: all 0.2s ease-in;
 }
 .card-text a{
   text-decoration: none;
@@ -143,6 +148,9 @@
   text-align: center;
   color: #47B57B;
 }
+.ad-img{
+  width: 30%;
+}
 .ad-list{
   margin: 20px 0;
   text-align: left;
@@ -171,4 +179,10 @@
 }
 .link-login:hover{
   color: black;
+}
+
+@media all and (max-width: 480px){
+  .mini-catalog{
+    padding: 50px 0;
+  }
 }
