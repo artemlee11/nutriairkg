@@ -10,6 +10,7 @@ const PostForm = () => {
   const [descr, setDescr] = useState("");
   const [price, setPrice] = useState("");
   const [url, setIMG] = React.useState("./assets/images/empty.png");
+  const [changeMode, setChangeMode] = useState(true);
   // const tasksCollection = collection(db, "posts")
 
   const handleSubmit = async (e) => {
@@ -31,7 +32,7 @@ const PostForm = () => {
     setPrice("");
     document.location.href = "/catalog";
   };
-  const handleChange   = (event) => {
+  const handleChange = (event) => {
     setIMG(event.target.value);
   };
   return (
@@ -58,15 +59,17 @@ const PostForm = () => {
           label="Введите цену продукта"
           variant="outlined"
         />
-
+        <h1>
+          {changeMode ? "" :
           <TextField
           value={url}
           onChange={(e) => handleChange(e.target.value)}
           id="change-price"
           label="Ссылка на картинку"
           variant="outlined"
-        />
-
+          />
+        }
+        </h1>
         <Button type="submit" variant="contained" onClick={handleSubmit}>
           Опубликовать пост
         </Button>
