@@ -3,10 +3,14 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import axios from "axios";
 import './PostForm.css';
+import {addDoc, collection } from 'firebase/firestore'
+import {db,auth} from '../../firebase'
 const PostForm = () => {
   const [title, setTitle] = useState("");
   const [descr, setDescr] = useState("");
   const [price, setPrice] = useState("");
+  const [url, setIMG] = useState('')
+  const tasksCollection = collection(db, "posts")
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -14,7 +18,14 @@ const PostForm = () => {
       postTitle: title,
       postDescr: descr,
       postPrice: price,
+      posturl: url      
     });
+    const res = await addDoc(tasksCollection,{
+      title,
+      descr,
+      url
+    })
+    console.log(res)
     setTitle("");
     setDescr("");
     setPrice("");
@@ -45,6 +56,7 @@ const PostForm = () => {
         label="Введите цену продукта"
         variant="outlined"
         />
+      
       <Button type="submit" variant="contained" onClick={handleSubmit}>
         Опубликовать пост
       </Button>

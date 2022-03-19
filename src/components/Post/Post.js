@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 import {Link} from 'react-router-dom'
 import blackimg from '../../img/energy.png';
-
+import {addDoc, collection } from 'firebase/firestore'
 const fetchData = () => {
     return axios.get('http://localhost:3004/posts')
     .then(response => response.data)
@@ -25,7 +25,7 @@ const Post = (props) => {
             //     <p>{post.postDescr}</p>
             // </div>
             <div className='catalog-card'>
-            <img className='card-img' src={blackimg} alt="" />
+            <img className='card-img' src={`http://localhost:3000/${post.posturl}`} alt="" />
             <div className='card-text'>
             <h1><Link to={`/singlepost/${post.id}`}>{post.postTitle}</Link></h1>
                 <h3>{post.postPrice}</h3>

@@ -42,15 +42,15 @@ const Gallery = () => {
                 <p>Посмотрите фото из нашего Instagram</p>
             </div>
             {images.map((src, index) => (
-        <img
-          src={ src }
-          className="gallery-img"
-          onClick={ () => openImageViewer(index) }
-          width="320"
-          key={ index }
-          alt=""
-        />
-      ))}
+              <img
+              src={ src }
+              className="gallery-img"
+              onClick={ () => openImageViewer(index) }
+              width="320"
+              key={ index }
+              alt=""
+              />
+              ))}
 
       {isViewerOpen && (
         <ImageViewer

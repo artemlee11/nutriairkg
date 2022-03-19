@@ -11,6 +11,7 @@ import ContactForm from '../../components/EmailJS/ContactForm';
 import { Link } from 'react-router-dom';
 import './SinglePost.css';
 import { Context } from "../../components/context/Context"
+
 const fetchData = (id) => {
     return axios.get(`http://localhost:3004/posts/${id}`)
         .then(response => response.data)
@@ -23,6 +24,7 @@ const SinglePost = () => {
     const [price, setPrice] = useState('')
     const [taste, setTaste] = useState('')
     const [usage, setUsage] = useState('')
+    const [url, setIMG] = useState('')
     const [effect, setEffect] = useState('')
     const [changeMode, setChangeMode] = useState(false)
     const { dispatch, user } = useContext(Context)
@@ -45,6 +47,7 @@ const SinglePost = () => {
         setTaste(post.postTaste)
         setUsage(post.postUsage)
         setEffect(post.postEffect)
+        setIMG(post.posturl)
     }
 
     const handleUpdatePost = async () => {
@@ -54,28 +57,30 @@ const SinglePost = () => {
             postPrice: price,
             postTaste: taste,
             postUsage: usage,
-            postEffect: effect
+            postEffect: effect,
+            posturl: url
         })
+        document.location.href = `/singlepost/${post.id}`
         setTitle("")
         setDescr("")
         setPrice("")
         setTaste("")
         setUsage("")
         setEffect("")
+        setIMG('')
         setChangeMode(false)
     }
     const [buttonPopup, setButtonPopup] = useState(false)
     return (
 
         <div className='singlepost'>
-            <h1 className='about-title'>{post.postTitle}</h1>
+            <h1 className='about-title'>Nutriair {post.postTitle}</h1>
             <img className='smoke-main' src={Smoke1} alt="" />
             <div className='singlepost-container'>
 
                 <div className='singlepost-card'>
-                    <img className='singlepost-img' src={blackimg} alt="" />
+                <img className='singlepost-img' src={`http://localhost:3000/${post.posturl}`} alt="" />
                     <div className='singlepost-text'>
-
                         <h1>
                             {changeMode ?
                                 <TextField
@@ -85,6 +90,17 @@ const SinglePost = () => {
                                     label="Введите название продукта"
                                     variant="outlined" />
                                 : post.postTitle}
+                        </h1>
+                        <h1>
+                            {changeMode ?
+                                <TextField
+                                    value={url}
+                                    onChange={e => setIMG(e.target.value)}
+                                    id="post-title"
+                                    label="Введите название продукта"
+                                    defaultValue="Hello World"
+                                    variant="outlined" />
+                                : ""}
                         </h1>
                         <p>
                             {changeMode ?

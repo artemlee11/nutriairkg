@@ -23,4 +23,3 @@ export const userUpdate = (user) => ({
 export const userDelete = () => ({
     type:"USER_DELETE"
 })
-
