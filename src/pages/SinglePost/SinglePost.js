@@ -5,10 +5,10 @@ import TextField from '@mui/material/TextField';
 import Smoke1 from '../../img/smoke1.png';
 import FAQ from '../FAQ/FAQ';
 import Footer from '../Footer/Footer';
-import blackimg from '../../img/energy.png';
+// import blackimg from '../../img/energy.png';
 import Popup from '../../components/Popup/Popup';
 import ContactForm from '../../components/EmailJS/ContactForm';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import './SinglePost.css';
 import { Context } from "../../components/context/Context"
 
@@ -27,7 +27,7 @@ const SinglePost = () => {
     const [url, setIMG] = useState('')
     const [effect, setEffect] = useState('')
     const [changeMode, setChangeMode] = useState(false)
-    const { dispatch, user } = useContext(Context)
+    const { user } = useContext(Context)
     const { id } = useParams()
 
     useEffect(() => {

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 import {Link} from 'react-router-dom'
-import blackimg from '../../img/energy.png';
-import {addDoc, collection } from 'firebase/firestore'
+// import blackimg from '../../img/energy.png';
+// import {addDoc, collection } from 'firebase/firestore'
 const fetchData = () => {
     return axios.get('http://localhost:3004/posts')
     .then(response => response.data)
@@ -15,7 +15,7 @@ const Post = (props) => {
     useEffect(()=> {
         fetchData().then(data => setPosts(data))
     })
-    const [buttonPopup, setButtonPopup] = useState(false)
+    const [setButtonPopup] = useState(false)
     return (
         <div>
         {posts.map(post => {

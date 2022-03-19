@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import ImageViewer from 'react-simple-image-viewer';
-import img1 from '../../img/nutriair.png';
+// import img1 from '../../img/nutriair.png';
 import img2 from '../../img/gallery-energy.jpg';
 import img3 from '../../img/gallery-sleep.jpg';
 import img4 from '../../img/gallery-relax.jpg';
