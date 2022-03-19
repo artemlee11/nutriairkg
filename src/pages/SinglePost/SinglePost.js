@@ -97,8 +97,7 @@ const SinglePost = () => {
                                     value={url}
                                     onChange={e => setIMG(e.target.value)}
                                     id="post-title"
-                                    label="Введите название продукта"
-                                    defaultValue="Hello World"
+                                    label="Ссылка на картинку"
                                     variant="outlined" />
                                 : ""}
                         </h1>
