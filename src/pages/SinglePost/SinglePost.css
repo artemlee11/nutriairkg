@@ -56,3 +56,26 @@
   .descr-change h2{
     margin-right: 10px;
   }
+
+  @media all and (max-width: 480px){
+    .singlepost-card{
+      flex-direction: column;
+    }
+    .singlepost-text{
+      width: 90%;
+      margin: auto;
+    }
+    .singlepost-img {
+      width: 100%;
+    }
+    .descr-change {
+      font-size: 15px;
+      width: 100%;
+    }
+    .singlepost-descr h4{
+      line-height: unset;
+    }
+    .about-title {
+      font-size: 55px;
+    }
+  }

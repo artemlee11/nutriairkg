@@ -38,7 +38,7 @@ const Gallery = () => {
     return (
         <div className='Gallery'>
             <div className='gallery-text'>
-                <h1>Сделали более 3.000 заказов</h1>
+                <h1>Галерея</h1>
                 <p>Посмотрите фото из нашего Instagram</p>
             </div>
             {images.map((src, index) => (

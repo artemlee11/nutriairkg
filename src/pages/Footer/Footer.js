@@ -24,8 +24,8 @@ const Footer = () => {
     <div className='footer'>
       <img className='smoke-main' src={Smoke2} />
       <div className='footer-container'>
-        <h1>Чтобы сделать заказ заполните данные</h1>
-        <p>Мы перезвоним в течении 15 минут, чтобы уточнить ваши пожелания</p>
+        <h1>Оформите заявку на обратный звонок</h1>
+        <p>И Мы перезвоним Вам в течении 15 минут, чтобы уточнить ваши пожелания</p>
         <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
           <CallbackForm />
         </Popup>

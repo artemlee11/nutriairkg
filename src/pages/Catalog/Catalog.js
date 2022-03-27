@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Smoke1 from '../../img/smoke1.png';
-import FAQ from '../FAQ/FAQ';
+// import FAQ from '../FAQ/FAQ';
 import Footer from '../Footer/Footer';
 import Post from '../../components/Post/Post';
 import './Catalog.css';
@@ -14,7 +14,7 @@ const Catalog = () => {
                     <Post />
                 </div>
             </div>
-            <FAQ />
+
             <Footer />
         </div>
     );

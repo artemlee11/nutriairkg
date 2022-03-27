@@ -5,7 +5,9 @@ import TextareaField from "./TextareaField";
 import emailjs from 'emailjs-com';
 import Alert from '@mui/material/Alert';
 import Stack from '@mui/material/Stack';
-import '../Popup/Popup'
+// import axios from 'axios';
+import '../Popup/Popup';
+
 const ContactForm = () => {
   const [values, setValues] = useState({
     fullName: '',
@@ -49,6 +51,15 @@ const ContactForm = () => {
       [e.target.name]: e.target.value
     }))
   }
+//   const fetchData = () => {
+//     return axios.get('http://localhost:3004/posts')
+//     .then(response => response.data)
+// }
+//   const [posts, setPosts] = useState([])
+//   const [title, setTitle] = useState('')
+//   useEffect(()=> {
+//       fetchData().then(data => setPosts(data))
+//   })
   return (
     <div className="lg:mt-48 lg:mr-48 pt-6 pb-8 bg-white shadow-xl rounded p-5">
       {status && renderAlert()}
@@ -57,7 +68,7 @@ const ContactForm = () => {
         <InputField value={values.fullName} handleChange={handleChange} label="Введите свое имя" name="fullName" type="text" placeholder="John Doe" />
         <InputField value={values.email} handleChange={handleChange} label="Введите свой E-Mail" name="email" type="email" placeholder="jphn@example.com" />
         <InputField value={values.phone} handleChange={handleChange} label="Введите свой номер телефона" name="phone" type="phone" placeholder="jphn@example.com" />
-        <SelectField handleChange={handleChange} name="role" label="Выберите вид:" />
+        {/* <SelectField handleChange={handleChange} name="role" label="Выберите вид:" /> */}
         <InputField value={values.amount} handleChange={handleChange} label="Количество" name="amount" type="amount" placeholder="jphn@example.com" />
         <TextareaField value={values.message} handleChange={handleChange} label="Сообщение" name="message" />
         <button type="submit"
